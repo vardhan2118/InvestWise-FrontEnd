@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+.alert {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+li .btn {
+  background-color: orange;
+  color: white;
+  padding: 0;
+  line-height: 40px;
+}
+li .btn:hover {
+  background-color: darkorange;
+}
+li .btn:active {
+  background-color: darkorange !important;
+}
+
+.active {
+  color: darkorange !important;
+}
+.home,
+.about {
+  padding-top: 70px;
+}
+.contact,
+.profile {
+  padding-top: 100px;
+}
+.custom-input:focus {
+  border-color: orange !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25) !important;
+}
+div .btn-block:hover,
+.contact-btn {
+  background-color: orange;
+  color: black !important;
+}
+.form-check-input:checked {
+  background-color: orange !important;
+  border: orange;
+}
+
+/* =====================================ABOUT========================================== */
+.custom-card .member-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: whitesmoke;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  border-top: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.custom-card .card:hover .member-details {
+  opacity: 1;
+}
+
+.custom-card .details-content {
+  padding: 5px 10px;
+}
+
+.custom-card .card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.custom-card .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.custom-card .card-title {
+  margin-bottom: 0;
+}
+
+.details-content p svg {
+  margin-right: 3px;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 450px !important;
+  max-height: 220px !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+/* =====================================SCROLLBAR========================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(7, 178, 246);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: skyblue;
+}
+
+/* =====================================PROFILE PHOTO========================================== */
+
+.custom-photo-input {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.photo-preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.selected-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-photo-input span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user-details {
+  padding-top: 35px;
+}

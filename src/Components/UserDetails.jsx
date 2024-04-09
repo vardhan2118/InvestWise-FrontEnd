@@ -46,6 +46,7 @@ const UserDetails = () => {
         if (res.data.status) {
           sessionStorage.removeItem("username");
           sessionStorage.removeItem("email");
+          sessionStorage.removeItem("mobileNumber");
           navigate("/login");
         }
       })
@@ -63,6 +64,7 @@ const UserDetails = () => {
         if (res.data.status) {
           sessionStorage.removeItem("username");
           sessionStorage.removeItem("email");
+          sessionStorage.removeItem("mobileNumber");
           navigate("/login");
         }
       })
@@ -84,9 +86,11 @@ const UserDetails = () => {
       </div>
 
       <div className="container mt-5 user-details">
-        <h1 className="mb-4">My Profile</h1>
+        <h1 className="mb-4 animate__animated animate__fadeInDown">
+          My Profile
+        </h1>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 animate__animated animate__fadeInLeft">
             <div className="card mb-2">
               <div className="card-body text-center p-4">
                 <img
@@ -122,7 +126,7 @@ const UserDetails = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8 animate__animated animate__fadeInRight">
             <div className="card flex-fill mb-4">
               <div className="card-body">
                 <h5 className="card-title">Personal Information</h5>
@@ -190,7 +194,7 @@ const UserDetails = () => {
           </div>
         </div>
         <div className="row mt-3">
-          <div className="col-md-12">
+          <div className="col-md-12 animate__animated animate__fadeInUp">
             <h5 className="mb-2">About Me</h5>
             <p className="text-muted">{userData.bio || "No bio available."}</p>
           </div>

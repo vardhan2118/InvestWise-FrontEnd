@@ -36,6 +36,7 @@ const NavBar = () => {
         if (res.data.status) {
           sessionStorage.removeItem("username");
           sessionStorage.removeItem("email");
+          sessionStorage.removeItem("mobileNumber");
           setIsLoggedIn(false);
           navigate("/login");
           closeNavbar();
@@ -129,7 +130,12 @@ const NavBar = () => {
                     <>
                       <li className="nav-item ms-5 dropdown">
                         <span
-                          className="nav-link dropdown-toggle"
+                          className={`nav-link dropdown-toggle ${
+                            location.pathname.includes("/goal_tracker") ||
+                            location.pathname.includes("/investment_tracker")
+                              ? "active"
+                              : ""
+                          }`}
                           id="navbarDropdownServices"
                           role="button"
                           data-bs-toggle="dropdown"
@@ -145,7 +151,7 @@ const NavBar = () => {
                           <li>
                             <Link
                               className="dropdown-item"
-                              to="/investment-tracker"
+                              to="/investment_tracker"
                               onClick={closeNavbar}
                             >
                               Investment Tracker
@@ -154,7 +160,7 @@ const NavBar = () => {
                           <li>
                             <Link
                               className="dropdown-item"
-                              to="/goal-tracker"
+                              to="/goal_tracker"
                               onClick={closeNavbar}
                             >
                               Goal Tracker
@@ -164,7 +170,12 @@ const NavBar = () => {
                       </li>
                       <li className="nav-item ms-5 dropdown">
                         <span
-                          className="nav-link dropdown-toggle"
+                          className={`nav-link dropdown-toggle ${
+                            location.pathname.includes("/finance_courses") ||
+                            location.pathname.includes("/investment_courses")
+                              ? "active"
+                              : ""
+                          }`}
                           id="navbarDropdownServices"
                           role="button"
                           data-bs-toggle="dropdown"
@@ -180,19 +191,19 @@ const NavBar = () => {
                           <li>
                             <Link
                               className="dropdown-item"
-                              to="/investment-courses"
+                              to="/finance_courses"
                               onClick={closeNavbar}
                             >
-                              Investment Courses
+                              Finance Courses
                             </Link>
                           </li>
                           <li>
                             <Link
                               className="dropdown-item"
-                              to="/finance-courses"
+                              to="/investment_courses"
                               onClick={closeNavbar}
                             >
-                              Finance Courses
+                              Investment Courses
                             </Link>
                           </li>
                         </ul>

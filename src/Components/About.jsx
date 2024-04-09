@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import person1 from "../assets/vardhan.jpg";
+import person2 from "../assets/vardhan1.jpg";
 import person3 from "../assets/lokesh.jpg";
 import person4 from "../assets/hussain.jpg";
 import person5 from "../assets/raghu.jpg";
@@ -24,7 +25,7 @@ const About = () => {
       email: "2003yaseenkhan@gmail.com",
       phoneNumber: "+91 9391147338 ",
       address: "456 Park Ave, Town, Country",
-      image: person1,
+      image: person2,
     },
     {
       id: 3,
@@ -58,7 +59,7 @@ const About = () => {
       <div className="container mt-5 about">
         <div className="row">
           <div className="col-lg-6 animate__animated animate__fadeInLeft">
-            <h2 className="mb-4">About InvestWise</h2>
+            <h1 className="mb-4">About InvestWise</h1>
             <p>
               InvestWise is a comprehensive Personal Finance and Investment
               Education Platform that empowers individuals to make informed
@@ -77,7 +78,7 @@ const About = () => {
           </div>
         </div>
         <div className="row mt-2 justify-content-center animate__animated animate__fadeInUp">
-          <h2 className="text-center mb-5">Our Team</h2>
+          <h1 className="text-center mb-3">Our Team</h1>
           {members.map((member) => (
             <div
               key={member.id}

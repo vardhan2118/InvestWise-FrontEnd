@@ -9,7 +9,8 @@ h1 {
   font-style: normal;
   letter-spacing: 0.5px;
 }
-p {
+p,
+.list-group-item {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -124,7 +125,8 @@ div .btn-block:hover,
     max-width: 50%;
   }
 }
-h6 {
+h6,
+h5 {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
@@ -185,4 +187,15 @@ h6 {
 
 .user-details {
   padding-top: 35px;
+}
+
+.finance,
+.investment,
+.investment-tracker,
+.goal-tracker {
+  padding-top: 80px;
+}
+
+.dropdown-item.active{
+  background-color: gray;
 }

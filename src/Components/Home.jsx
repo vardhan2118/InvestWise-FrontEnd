@@ -1,12 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
 import homeImage1 from "../assets/home1.jpg";
 import homeImage2 from "../assets/home2.jpg";
 import homeImage3 from "../assets/home3.jpg";
+import homeImage4 from "../assets/home4.jpg";
 import homeImage5 from "../assets/home5.jpg";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const username = sessionStorage.getItem("username");
+
+  const handleRestrictedNavigation = (page) => {
+    if (username) {
+      navigate(page);
+    } else {
+      navigate("/login");
+    }
+  };
+
   return (
     <div>
       <NavBar />
@@ -54,7 +66,7 @@ const Home = () => {
                   </div>
                   <div className="carousel-item">
                     <img
-                      src={homeImage3}
+                      src={homeImage4}
                       className="d-block w-100"
                       alt="Fourth slide"
                       style={{ maxHeight: "520px" }}
@@ -113,23 +125,26 @@ const Home = () => {
                   style={{ backgroundColor: "#F7D7D7" }}
                 >
                   <div className="card-body">
-                    <h5 className="card-title">Financial Articles</h5>
+                    <h5 className="card-title">Investment Tracker</h5>
                     <p className="card-text">
-                      Discover insightful articles on various financial topics.
-                      Expand your knowledge on investment strategies, market
-                      trends, and more.
+                      Track your investments with ease using our investment
+                      tracker. Stay updated on your portfolio's performance,
+                      monitor market trends for financial success.
                     </p>
-                    <Link
-                      to="#"
+                    <button
+                      onClick={() =>
+                        handleRestrictedNavigation("/investment_tracker")
+                      }
                       className="btn btn-primary btn-lg btn-block"
                       style={{
                         boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
                         backgroundColor: "#FF6B6B",
                         borderColor: "#FF6B6B",
+                        fontFamily: "Poppins",
                       }}
                     >
-                      Read More
-                    </Link>
+                      {username ? "Track Now" : "Login to Track"}
+                    </button>
                   </div>
                 </div>
               </div>
@@ -139,23 +154,26 @@ const Home = () => {
                   style={{ backgroundColor: "#D5ECC2" }}
                 >
                   <div className="card-body">
-                    <h5 className="card-title">Investment Guides</h5>
+                    <h5 className="card-title">Goal Tracker</h5>
                     <p className="card-text">
-                      Explore step-by-step guides to kickstart your investments.
-                      From setting financial goals to building a diversified
-                      portfolio, we've got you covered.
+                      Stay on top of your financial goals with our goal tracker.
+                      Set targets, monitor progress, and make adjustments along
+                      the way to ensure you're on the path to financial success.
                     </p>
-                    <Link
-                      to="#"
+                    <button
+                      onClick={() =>
+                        handleRestrictedNavigation("/goal_tracker")
+                      }
                       className="btn btn-primary btn-lg btn-block"
                       style={{
                         boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
                         backgroundColor: "#6BD5FF",
                         borderColor: "#6BD5FF",
+                        fontFamily: "Poppins",
                       }}
                     >
-                      Explore
-                    </Link>
+                      {username ? "Track Now" : "Login to Track"}
+                    </button>
                   </div>
                 </div>
               </div>
@@ -167,23 +185,26 @@ const Home = () => {
                   style={{ backgroundColor: "#FED9B7" }}
                 >
                   <div className="card-body">
-                    <h5 className="card-title">Video Tutorials</h5>
+                    <h5 className="card-title">Finance Videos</h5>
                     <p className="card-text">
                       Watch engaging video tutorials to deepen your
                       understanding of complex financial concepts. Learn at your
                       own pace with our comprehensive video library.
                     </p>
-                    <Link
-                      to="#"
+                    <button
+                      onClick={() =>
+                        handleRestrictedNavigation("/finance_courses")
+                      }
                       className="btn btn-primary btn-lg btn-block"
                       style={{
                         boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
                         backgroundColor: "#FFD76B",
                         borderColor: "#FFD76B",
+                        fontFamily: "Poppins",
                       }}
                     >
-                      Watch Now
-                    </Link>
+                      {username ? "Watch Now" : "Login to Watch"}
+                    </button>
                   </div>
                 </div>
               </div>
@@ -193,23 +214,26 @@ const Home = () => {
                   style={{ backgroundColor: "#D6EAF8" }}
                 >
                   <div className="card-body">
-                    <h5 className="card-title">Interactive Courses</h5>
+                    <h5 className="card-title">Investment Videos</h5>
                     <p className="card-text">
-                      Enroll in interactive courses designed to take your
-                      financial knowledge to the next level. Gain practical
-                      skills and insights from industry experts.
+                      Explore our concise video tutorials covering essential
+                      investment concepts, from understanding asset classes to
+                      advanced portfolio management strategies.
                     </p>
-                    <Link
-                      to="#"
+                    <button
+                      onClick={() =>
+                        handleRestrictedNavigation("/investment_courses")
+                      }
                       className="btn btn-primary btn-lg btn-block"
                       style={{
                         boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
                         backgroundColor: "#A3B5FF",
                         borderColor: "#A3B5FF",
+                        fontFamily: "Poppins",
                       }}
                     >
-                      Enroll Now
-                    </Link>
+                      {username ? "Watch Now" : "Login to Watch"}
+                    </button>
                   </div>
                 </div>
               </div>

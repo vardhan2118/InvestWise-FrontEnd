@@ -14,6 +14,10 @@ import Profile from "./Components/Profile.jsx";
 import About from "./Components/About.jsx";
 import UserDetails from "./Components/UserDetails.jsx";
 import CreateProfile from "./Components/CreateProfile.jsx";
+import FinanceCourses from "./Components/FinanceCourses.jsx";
+import InvestmentCourses from "./Components/InvestmentCourses.jsx";
+import InvestmentTracker from "./Components/InvestmentTracker.jsx";
+import GoalTracker from "./Components/GoalTracker.jsx";
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/user_details" element={<UserDetails />} />
         <Route path="/create_profile" element={<CreateProfile />} />
+        <Route path="/finance_courses" element={<FinanceCourses />} />
+        <Route path="/investment_courses" element={<InvestmentCourses />} />
+        <Route path="/investment_tracker" element={<InvestmentTracker />} />
+        <Route path="/goal_tracker" element={<GoalTracker />} />
       </Routes>
     </BrowserRouter>
   );

@@ -26,6 +26,7 @@ const CreateProfile = () => {
   }, []);
 
   const [profileData, setProfileData] = useState({
+    photo: "",
     firstName: "",
     lastName: "",
     username: "",
@@ -66,6 +67,7 @@ const CreateProfile = () => {
       alert("Profile created successfully");
       navigate("/user_details");
       setProfileData({
+        photo: "",
         firstName: "",
         lastName: "",
         username: "",
@@ -138,6 +140,46 @@ const CreateProfile = () => {
     "Uttarakhand",
     "West Bengal",
   ];
+
+  const [profileCreated, setProfileCreated] = useState(false);
+
+  useEffect(() => {
+    const mobileNumber = sessionStorage.getItem("mobileNumber");
+    if (mobileNumber !== null && mobileNumber !== "undefined") {
+      setProfileCreated(true);
+    } else {
+      setProfileCreated(false);
+    }
+  }, []);
+
+
+  const handleViewProfile = () => {
+    navigate("/user_details");
+  };
+
+  if (profileCreated) {
+    return (
+      <div>
+        <div>
+          <NavBar />
+        </div>
+        <div
+          className="container d-flex justify-content-center align-items-center"
+          style={{ height: "100vh" }}
+        >
+          <div className="text-center">
+            <h1>You have already created a profile</h1>
+            <button
+              className="btn btn-primary mt-3"
+              onClick={handleViewProfile}
+            >
+              View Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>

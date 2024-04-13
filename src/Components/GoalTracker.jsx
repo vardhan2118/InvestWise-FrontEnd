@@ -96,9 +96,9 @@ const GoalTracker = () => {
       </div>
       <div className="container goal-tracker">
         <div className="row">
-          <div className="col-md-6">
-            <div className="container mt-5">
-              <h1 className="mb-4 text-center">Goal Tracker</h1>
+          <div className="col-md-6 animate__animated animate__fadeInLeft">
+            <div className="container mt-3">
+              <h1 className="mb-4">Goal Tracker</h1>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <input
@@ -205,7 +205,7 @@ const GoalTracker = () => {
                             <h3 className="card-title">{goal.title}</h3>
                             <p className="card-text">{goal.description}</p>
                             <p className="card-text">
-                              Target Date:{" "}
+                              <strong> Target Date: </strong>
                               {new Date(goal.targetDate).toLocaleDateString()}
                             </p>
                           </>
@@ -214,7 +214,7 @@ const GoalTracker = () => {
                       <div style={{ minWidth: "70px" }}>
                         {goal.editing ? (
                           <FaSave
-                            className="text-primary mx-2"
+                            className="text-success mx-2"
                             style={{ cursor: "pointer" }}
                             onClick={() => handleSave(index)}
                           />
@@ -237,9 +237,10 @@ const GoalTracker = () => {
               </ul>
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="container mt-5">
-              <h2 className="text-center">Why Set Goals?</h2>
+          <div className="col-md-6 animate__animated animate__fadeInRight">
+            <div className="container mt-3">
+              <h2 className="mb-3">Why Set Goals?</h2>
+              <img src={image} alt="Goals" className="img-fluid mt-3 mb-3" />
               <p>
                 Setting goals is crucial for personal growth and achievement. It
                 gives you a clear direction and motivates you to take action
@@ -247,7 +248,6 @@ const GoalTracker = () => {
                 starting a business, or achieving personal milestones, setting
                 clear and achievable goals is the first step towards success.
               </p>
-              <img src={image} alt="Goals" className="img-fluid mt-3" />
             </div>
           </div>
         </div>

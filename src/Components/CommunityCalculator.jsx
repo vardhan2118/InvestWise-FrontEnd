@@ -59,7 +59,10 @@ const CommunityCalculator = () => {
           className="container"
           style={{ display: "flex", gap: "20px", paddingTop: "80px" }}
         >
-          <div className="calculator" style={{ flex: 1 }}>
+          <div
+            className="calculator animate__animated animate__fadeInLeft"
+            style={{ flex: 1 }}
+          >
             <div
               style={{
                 textAlign: "start",
@@ -156,7 +159,10 @@ const CommunityCalculator = () => {
               )}
             </div>
           </div>
-          <div className="community" style={{ flex: 1 }}>
+          <div
+            className="community animate__animated animate__fadeInRight"
+            style={{ flex: 1 }}
+          >
             <div
               style={{
                 textAlign: "start",

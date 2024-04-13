@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import image1 from "../assets/finance1.jpg";
 import image2 from "../assets/finance2.jpg";
@@ -269,11 +270,10 @@ const FinanceCourses = () => {
                   alignItems: "center",
                 }}
               >
-                <a
-                  href={course.videoUrl}
+                <Link
+                  to={course.videoUrl}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "none" }}
+                  style={{ width: "100%" }}
                 >
                   <button
                     style={{
@@ -284,24 +284,12 @@ const FinanceCourses = () => {
                       borderRadius: "5px",
                       cursor: "pointer",
                       width: "100%",
+                      fontFamily: "Poppins",
                     }}
                   >
                     Watch Now
                   </button>
-                </a>
-                <button
-                  style={{
-                    backgroundColor: "#28a745",
-                    color: "#fff",
-                    border: "none",
-                    padding: "8px 8px",
-                    borderRadius: "5px",
-                    cursor: "pointer",
-                    width: "calc(1/3 * 100%)",
-                  }}
-                >
-                  Save
-                </button>
+                </Link>
               </div>
             </div>
           ))}

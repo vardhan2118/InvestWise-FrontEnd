@@ -152,7 +152,6 @@ const CreateProfile = () => {
     }
   }, []);
 
-
   const handleViewProfile = () => {
     navigate("/user_details");
   };
@@ -170,8 +169,14 @@ const CreateProfile = () => {
           <div className="text-center">
             <h1>You have already created a profile</h1>
             <button
-              className="btn btn-primary mt-3"
+            className="btn btn-warning mt-3 text-light special"
               onClick={handleViewProfile}
+              style={{
+                fontSize: "20px",
+                fontWeight: "600",
+                fontFamily: "Poppins",
+                letterSpacing: "0.5px",
+              }}
             >
               View Profile
             </button>

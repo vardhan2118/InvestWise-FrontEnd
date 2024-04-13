@@ -108,7 +108,7 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="btn btn-warning w-100 text-light"
+                  className="btn btn-warning w-100 text-light special"
                   style={{
                     fontSize: "20px",
                     fontWeight: "600",

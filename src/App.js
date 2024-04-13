@@ -18,6 +18,7 @@ import FinanceCourses from "./Components/FinanceCourses.jsx";
 import InvestmentCourses from "./Components/InvestmentCourses.jsx";
 import InvestmentTracker from "./Components/InvestmentTracker.jsx";
 import GoalTracker from "./Components/GoalTracker.jsx";
+import CommunityCalculator from "./Components/CommunityCalculator.jsx";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/investment_courses" element={<InvestmentCourses />} />
         <Route path="/investment_tracker" element={<InvestmentTracker />} />
         <Route path="/goal_tracker" element={<GoalTracker />} />
+        <Route path="/community_calculator" element={<CommunityCalculator />} />
       </Routes>
     </BrowserRouter>
   );

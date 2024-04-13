@@ -166,6 +166,15 @@ const NavBar = () => {
                               Goal Tracker
                             </Link>
                           </li>
+                          <li>
+                            <Link
+                              className="dropdown-item"
+                              to="/community_calculator"
+                              onClick={closeNavbar}
+                            >
+                              SIP Calculator
+                            </Link>
+                          </li>
                         </ul>
                       </li>
                       <li className="nav-item ms-5 dropdown">
@@ -235,7 +244,12 @@ const NavBar = () => {
                   {username ? (
                     <div className="nav-item dropdown ms-5">
                       <span
-                        className="nav-link dropdown-toggle"
+                        className={`nav-link dropdown-toggle ${
+                          location.pathname.includes("/create_profile") ||
+                          location.pathname.includes("/user_details")
+                            ? "active"
+                            : ""
+                        }`}
                         id="navbarDropdown"
                         role="button"
                         data-bs-toggle="dropdown"
@@ -267,13 +281,13 @@ const NavBar = () => {
                           </Link>
                         </li>
                         <li>
-                          <span
+                          <Link
                             className="dropdown-item"
                             style={{ cursor: "pointer" }}
                             onClick={handleLogout}
                           >
                             Logout
-                          </span>
+                          </Link>
                         </li>
                       </ul>
                     </div>

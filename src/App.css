@@ -65,7 +65,10 @@ div .btn-block:hover,
   background-color: orange !important;
   border: orange;
 }
-
+div .special:hover {
+  background-color: orange;
+  color: black !important;
+}
 /* =====================================ABOUT========================================== */
 .custom-card .member-details {
   position: absolute;
@@ -134,20 +137,20 @@ h5 {
 /* =====================================SCROLLBAR========================================== */
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: white;
+  background: lightgray;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(7, 178, 246);
-  border-radius: 10px;
+  background: orange;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: skyblue;
+  background: darkorange;
 }
 
 /* =====================================PROFILE PHOTO========================================== */
@@ -196,6 +199,6 @@ h5 {
   padding-top: 80px;
 }
 
-.dropdown-item.active{
+.navbar-nav .dropdown-menu .dropdown-item:focus {
   background-color: gray;
 }

@@ -447,7 +447,7 @@ const Profile = () => {
                 width: "50%",
               }}
             >
-              Save Changes
+              Save
             </button>
           </div>
         </form>

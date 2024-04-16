@@ -104,7 +104,7 @@ const Contact = () => {
                     required
                     style={{ height: "200px" }}
                   ></textarea>
-                  <label htmlFor="floatingComments">Enter Queries</label>
+                  <label htmlFor="floatingComments">Enter Your Message</label>
                 </div>
                 <button
                   type="submit"

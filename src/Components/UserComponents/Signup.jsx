@@ -38,7 +38,7 @@ const Signup = () => {
 
   return (
     <div className=" d-flex justify-content-center align-items-center vh-100">
-      <div className="col-md-4 ">
+      <div className="col-md-4 container-fluid ">
         <div className="card">
           <div className="card-body">
             <form onSubmit={handleSubmit}>
@@ -90,7 +90,7 @@ const Signup = () => {
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">Create Password</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text">
                     <MdLockOutline />

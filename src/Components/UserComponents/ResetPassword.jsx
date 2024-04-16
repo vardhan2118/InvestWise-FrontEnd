@@ -33,7 +33,7 @@ const ResetPassword = () => {
 
   return (
     <div className=" d-flex justify-content-center align-items-center vh-100">
-      <div className="col-md-4 ">
+      <div className="col-md-4 container-fluid ">
         <div className="card">
           <div className="card-body">
             <form onSubmit={handleSubmit}>

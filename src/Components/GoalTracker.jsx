@@ -94,7 +94,7 @@ const GoalTracker = () => {
       <div>
         <NavBar />
       </div>
-      <div className="container goal-tracker">
+      <div className="container-fluid goal-tracker">
         <div className="row">
           <div className="col-md-6 animate__animated animate__fadeInLeft">
             <div className="container mt-3">

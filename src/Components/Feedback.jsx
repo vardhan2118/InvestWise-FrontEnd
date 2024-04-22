@@ -1,17 +1,17 @@
 import React from "react";
 import NavBar from "./NavBar";
 
-const InvestmentTracker = () => {
+const Feedback = () => {
   return (
     <div>
       <div>
         <NavBar />
       </div>
-      <div className="container investment-tracker">
-        <h1>Investment Tracker</h1>
+      <div className="container feedback">
+        <h1>Feedback Form</h1>
       </div>
     </div>
   );
 };
 
-export default InvestmentTracker;
+export default Feedback;

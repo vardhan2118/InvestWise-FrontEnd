@@ -10,7 +10,7 @@ const Profile = () => {
     photo: "",
     firstName: "",
     lastName: "",
-    username: "",
+    username: sessionStorage.getItem("username") || "",
     email: "",
     mobileNumber: "",
     dateOfBirth: "",
@@ -44,6 +44,9 @@ const Profile = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === "username") {
+      sessionStorage.setItem("username", value);
+    }
     setProfileData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -220,9 +223,6 @@ const Profile = () => {
           <div className="col-md-6">
             <label htmlFor="validationCustom06" className="form-label">
               Email
-              <span style={{ fontFamily: "Poppins", fontSize: "10px" }}>
-                (Give email used in login)
-              </span>
             </label>
             <input
               type="email"
@@ -232,6 +232,7 @@ const Profile = () => {
               value={profileData.email}
               onChange={handleChange}
               required
+              readOnly
             />
             <div className="invalid-feedback">Please provide an email.</div>
           </div>

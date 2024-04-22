@@ -116,8 +116,8 @@ div .special:hover {
 
 .project-image {
   width: 100%;
-  max-width: 450px !important;
-  max-height: 220px !important;
+  max-width: 500px !important;
+  max-height: 250px !important;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -195,7 +195,9 @@ h5 {
 .finance,
 .investment,
 .investment-tracker,
-.goal-tracker {
+.goal-tracker,
+.feedback,
+.recommended-courses {
   padding-top: 80px;
 }
 

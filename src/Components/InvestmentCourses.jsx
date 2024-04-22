@@ -112,7 +112,7 @@ const courses = [
   },
   {
     id: 11,
-    title: "EPERTS TIPS ON INVESTING",
+    title: "EXPERTS TIPS ON INVESTING",
     description:
       "Experts share investment tips on building sustainable wealth.",
     instructor: "Yahoo Finance ",

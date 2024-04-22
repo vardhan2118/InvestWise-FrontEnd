@@ -27,13 +27,36 @@ const UserDetails = () => {
     fetchUserData();
   }, []);
 
+  const handleCreateProfile = () => {
+    navigate("/create_profile");
+  };
+
   if (!userData) {
     return (
-      <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ height: "100vh" }}
-      >
-        <div className="spinner-border" role="status"></div>
+      <div>
+        <div>
+          <NavBar />
+        </div>
+        <div
+          className="container d-flex justify-content-center align-items-center"
+          style={{ height: "100vh" }}
+        >
+          <div className="text-center">
+            <h1>Please Create your profile first</h1>
+            <button
+              className="btn btn-warning mt-3 text-light special"
+              onClick={handleCreateProfile}
+              style={{
+                fontSize: "20px",
+                fontWeight: "600",
+                fontFamily: "Poppins",
+                letterSpacing: "0.5px",
+              }}
+            >
+              Create Profile
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

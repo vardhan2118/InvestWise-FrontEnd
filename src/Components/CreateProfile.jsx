@@ -3,6 +3,7 @@ import axios from "axios";
 import NavBar from "./NavBar";
 import { useNavigate } from "react-router-dom";
 
+
 const CreateProfile = () => {
   const navigate = useNavigate();
 
@@ -29,8 +30,8 @@ const CreateProfile = () => {
     photo: "",
     firstName: "",
     lastName: "",
-    username: "",
-    email: "",
+    username: sessionStorage.getItem("username") || "",
+    email: sessionStorage.getItem("email") || "",
     mobileNumber: "",
     dateOfBirth: "",
     annualIncome: "",
@@ -48,17 +49,28 @@ const CreateProfile = () => {
       ...prevData,
       [name]: value,
     }));
+
+    if (name === "username") {
+      sessionStorage.setItem("username", value);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if (profileData.mobileNumber === "undefined") {
+        setProfileData((prevData) => ({
+          ...prevData,
+          mobileNumber: prevData.mobileNumber,
+        }));
+      }
+
+      sessionStorage.setItem("mobileNumber", profileData.mobileNumber);
+
       await axios.post(
         "http://localhost:4000/profile",
-
         {
           ...profileData,
-          email: profileData.email,
         },
         {
           withCredentials: true,
@@ -66,22 +78,6 @@ const CreateProfile = () => {
       );
       alert("Profile created successfully");
       navigate("/user_details");
-      setProfileData({
-        photo: "",
-        firstName: "",
-        lastName: "",
-        username: "",
-        email: "",
-        mobileNumber: "",
-        dateOfBirth: "",
-        annualIncome: "",
-        occupation: "",
-        address: "",
-        state: "",
-        zip: "",
-        gender: "",
-        bio: "",
-      });
     } catch (error) {
       console.error("Error creating profile:", error);
     }
@@ -169,7 +165,7 @@ const CreateProfile = () => {
           <div className="text-center">
             <h1>You have already created a profile</h1>
             <button
-            className="btn btn-warning mt-3 text-light special"
+              className="btn btn-warning mt-3 text-light special"
               onClick={handleViewProfile}
               style={{
                 fontSize: "20px",
@@ -288,9 +284,6 @@ const CreateProfile = () => {
           <div className="col-md-6">
             <label htmlFor="validationCustom06" className="form-label">
               Email
-              <span style={{ fontFamily: "Poppins", fontSize: "10px" }}>
-                (Give email used in login)
-              </span>
             </label>
             <input
               type="email"
@@ -298,13 +291,9 @@ const CreateProfile = () => {
               id="validationCustom06"
               name="email"
               value={profileData.email}
-              onChange={handleChange}
               required
+              readOnly
             />
-            <div className="valid-feedback">Looks good!</div>
-            <div className="invalid-feedback">
-              Please provide a valid email.
-            </div>
           </div>
 
           {/* Mobile Number */}

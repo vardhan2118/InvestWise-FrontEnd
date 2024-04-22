@@ -118,8 +118,8 @@ const Home = () => {
                 your knowledge and make informed financial decisions.
               </p>
             </div>
-            <div className="row">
-              <div className="col-md-6 animate__animated animate__fadeInLeft">
+            <div className="row animate__animated animate__fadeInUp">
+              <div className="col-md-6">
                 <div
                   className="card border-0 shadow-lg mb-4"
                   style={{ backgroundColor: "#F7D7D7" }}
@@ -148,7 +148,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6 animate__animated animate__fadeInRight">
+              <div className="col-md-6">
                 <div
                   className="card border-0 shadow-lg mb-4"
                   style={{ backgroundColor: "#D5ECC2" }}
@@ -178,8 +178,8 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-md-6 animate__animated animate__fadeInLeft">
+            <div className="row animate__animated animate__fadeInUp">
+              <div className="col-md-6 ">
                 <div
                   className="card border-0 shadow-lg mb-4"
                   style={{ backgroundColor: "#FED9B7" }}
@@ -208,7 +208,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6 animate__animated animate__fadeInRight">
+              <div className="col-md-6">
                 <div
                   className="card border-0 shadow-lg mb-4"
                   style={{ backgroundColor: "#D6EAF8" }}

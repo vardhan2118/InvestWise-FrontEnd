@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -16,12 +18,12 @@ const Contact = () => {
         formData,
         { withCredentials: true }
       );
-      alert("Details sended successfully");
+      toast.success("Details sent successfully");
       console.log(response.data);
-
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Error occurred:", error);
+      toast.error("Failed to send details. Please try again later.");
     }
   };
 
@@ -31,6 +33,7 @@ const Contact = () => {
 
   return (
     <div>
+      <ToastContainer />
       <div>
         <NavBar />
       </div>
@@ -91,7 +94,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                   />
-                  <label htmlFor="floatingEmail">Email </label>
+                  <label htmlFor="floatingEmail">Email</label>
                 </div>
                 <div className="form-floating mb-4">
                   <textarea

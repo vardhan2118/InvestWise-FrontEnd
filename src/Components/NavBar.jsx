@@ -151,10 +151,10 @@ const NavBar = () => {
                           <li>
                             <Link
                               className="dropdown-item"
-                              to="/investment_tracker"
+                              to="/transactions_manager"
                               onClick={closeNavbar}
                             >
-                              Investment Tracker
+                              Transcations Manager
                             </Link>
                           </li>
                           <li>
@@ -197,6 +197,15 @@ const NavBar = () => {
                           className="dropdown-menu"
                           aria-labelledby="navbarDropdownServices"
                         >
+                          <li>
+                            <Link
+                              className="dropdown-item"
+                              to="/recommended_courses"
+                              onClick={closeNavbar}
+                            >
+                              Recommended Courses
+                            </Link>
+                          </li>
                           <li>
                             <Link
                               className="dropdown-item"

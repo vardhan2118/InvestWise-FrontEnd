@@ -125,15 +125,16 @@ const Home = () => {
                   style={{ backgroundColor: "#F7D7D7" }}
                 >
                   <div className="card-body">
-                    <h5 className="card-title">Investment Tracker</h5>
+                    <h5 className="card-title">Transactions Manager</h5>
                     <p className="card-text">
-                      Track your investments with ease using our investment
-                      tracker. Stay updated on your portfolio's performance,
-                      monitor market trends for financial success.
+                      Manage your transactions effortlessly with our
+                      Transactions Manager. Keep tabs on your financial
+                      activities and track market trends for financial
+                      success.
                     </p>
                     <button
                       onClick={() =>
-                        handleRestrictedNavigation("/investment_tracker")
+                        handleRestrictedNavigation("/transactions_manager")
                       }
                       className="btn btn-primary btn-lg btn-block"
                       style={{
@@ -143,7 +144,7 @@ const Home = () => {
                         fontFamily: "Poppins",
                       }}
                     >
-                      {username ? "Track Now" : "Login to Track"}
+                      {username ? "Manage Now" : "Login to Manage"}
                     </button>
                   </div>
                 </div>

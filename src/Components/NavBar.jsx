@@ -132,7 +132,10 @@ const NavBar = () => {
                         <span
                           className={`nav-link dropdown-toggle ${
                             location.pathname.includes("/goal_tracker") ||
-                            location.pathname.includes("/investment_tracker")
+                            location.pathname.includes(
+                              "/transactions_manager"
+                            ) ||
+                            location.pathname.includes("/community_calculator")
                               ? "active"
                               : ""
                           }`}
@@ -181,7 +184,8 @@ const NavBar = () => {
                         <span
                           className={`nav-link dropdown-toggle ${
                             location.pathname.includes("/finance_courses") ||
-                            location.pathname.includes("/investment_courses")
+                            location.pathname.includes("/investment_courses") ||
+                            location.pathname.includes("/recommended_courses")
                               ? "active"
                               : ""
                           }`}

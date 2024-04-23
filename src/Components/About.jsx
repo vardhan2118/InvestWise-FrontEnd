@@ -24,7 +24,7 @@ const About = () => {
       name: "Yaseen Khan",
       email: "2003yaseenkhan@gmail.com",
       phoneNumber: "+91 9391147338 ",
-      address: "456 Park Ave, Town, Country",
+      address: "19/280, Balobigari street,Proddatur",
       image: person2,
     },
     {

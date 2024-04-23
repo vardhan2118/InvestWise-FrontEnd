@@ -78,26 +78,33 @@ const UserDetails = () => {
       });
   };
 
-  const handleDeleteAccount = () => {
-    setDeleteLoading(true);
-    const email = sessionStorage.getItem("email");
-    axios
-      .delete("http://localhost:4000/delete_account", { data: { email } })
-      .then((res) => {
-        if (res.data.status) {
-          sessionStorage.removeItem("username");
-          sessionStorage.removeItem("email");
-          sessionStorage.removeItem("mobileNumber");
-          navigate("/login");
-        }
-      })
-      .catch((error) => {
-        console.error("Error deleting account:", error);
-      })
-      .finally(() => {
-        setDeleteLoading(false);
-      });
-  };
+ const handleDeleteAccount = () => {
+   const confirmDelete = window.confirm(
+     "Are you sure you want to delete your account? This action cannot be undone and all your data will be deleted permanently."
+   );
+
+   if (confirmDelete) {
+     setDeleteLoading(true);
+     const email = sessionStorage.getItem("email");
+     axios
+       .delete("http://localhost:4000/delete_account", { data: { email } })
+       .then((res) => {
+         if (res.data.status) {
+           sessionStorage.removeItem("username");
+           sessionStorage.removeItem("email");
+           sessionStorage.removeItem("mobileNumber");
+           navigate("/login");
+         }
+       })
+       .catch((error) => {
+         console.error("Error deleting account:", error);
+       })
+       .finally(() => {
+         setDeleteLoading(false);
+       });
+   }
+ };
+
 
   const capitalizedGender =
     userData.gender.charAt(0).toUpperCase() + userData.gender.slice(1);

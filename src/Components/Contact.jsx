@@ -5,8 +5,8 @@ import { toast, ToastContainer } from "react-toastify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    name: sessionStorage.getItem("username") || "",
+    email: sessionStorage.getItem("email") || "",
     message: "",
   });
 
@@ -93,6 +93,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    readOnly
                   />
                   <label htmlFor="floatingEmail">Email</label>
                 </div>

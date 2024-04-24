@@ -93,7 +93,6 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    readOnly
                   />
                   <label htmlFor="floatingEmail">Email</label>
                 </div>

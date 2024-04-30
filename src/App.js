@@ -19,7 +19,6 @@ import FinanceCourses from "./Components/FinanceCourses.jsx";
 import InvestmentCourses from "./Components/InvestmentCourses.jsx";
 import GoalTracker from "./Components/GoalTracker.jsx";
 import CommunityCalculator from "./Components/CommunityCalculator.jsx";
-import Feedback from "./Components/Feedback.jsx";
 import RecommendedCourses from "./Components/RecommendedCourses.jsx";
 import TranscationsManager from "./Components/TransactionsManager.jsx";
 
@@ -43,7 +42,6 @@ function App() {
         <Route path="/transactions_manager" element={<TranscationsManager />} />
         <Route path="/goal_tracker" element={<GoalTracker />} />
         <Route path="/community_calculator" element={<CommunityCalculator />} />
-        <Route path="/feedback" element={<Feedback />} />
         <Route path="/recommended_courses" element={<RecommendedCourses />} />
       </Routes>
     </BrowserRouter>
